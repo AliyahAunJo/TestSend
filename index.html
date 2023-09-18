@@ -595,14 +595,14 @@
 
     //จบฟังก์ชั่น
     function sendImage() {
-      var link1 = document.getElementById("textBox1").value;
-      var link2 = document.getElementById("textBox2").value
+      // var link1 = document.getElementById("textBox1").value;
+    var link2 = JSON.parse(document.querySelector('#textBox2').value)
 
       liff.init({ liffId: "2000801717-140QWk46" });
       // liff.id equals to liffId
       liff.ready.then(() => {
         liff.shareTargetPicker([
-          JSON.parse(link2)
+          link2
         ])
           .then(() => {
             Swal.fire({
